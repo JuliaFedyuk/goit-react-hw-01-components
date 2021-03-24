@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
-import styles from "./FriendsList.module.css";
+import styles from "./Friend.module.css";
 
 const Friend = ({ avatar, name, isOnline }) => (
-  <div className={styles.item}>
+  <li key={name} className={styles.item}>
     <span
       className={styles.status}
       style={{ color: isOnline ? "green" : "red" }}
@@ -11,7 +11,7 @@ const Friend = ({ avatar, name, isOnline }) => (
     </span>
     <img className={styles.avatar} src={avatar} alt="" width="48" />
     <p className={styles.name}>{name}</p>
-  </div>
+  </li>
 );
 
 Friend.propTypes = {
