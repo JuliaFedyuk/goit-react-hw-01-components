@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
 import styles from "./Friend.module.css";
 
-const Friend = ({ avatar, name, isOnline }) => (
-  <li key={name} className={styles.item}>
+const Friend = ({ id, avatar, name, isOnline }) => (
+  <li key={id} className={styles.item}>
     <span
       className={styles.status}
       style={{ color: isOnline ? "green" : "red" }}
